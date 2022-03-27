@@ -7,4 +7,5 @@ The whole database can be downloaded with an Oracle DB schema. This repository i
 
 ## Assumptions
 Oracle VARCHAR2(n) converted to MySQL VARCHAR(n)
+
 Oracle NUMBER converted to MySQL decimal(30,2)
