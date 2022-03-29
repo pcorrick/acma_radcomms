@@ -2,11 +2,10 @@ CREATE TABLE `access_area` (
   `AREA_ID` int NOT NULL,
   `AREA_CODE` varchar(256) COLLATE utf8mb4_unicode_ci NULL,
   `AREA_NAME` varchar(256) COLLATE utf8mb4_unicode_ci NULL,
-  `AREA_CATEGORY` int NULL
+  `AREA_CATEGORY` tinyint NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
 ALTER TABLE `access_area` ADD PRIMARY KEY (`AREA_ID`);
-  
+
 create table `antenna`(
  `ANTENNA_ID` varchar(31) COLLATE utf8mb4_unicode_ci NOT NULL,
  `GAIN` decimal(30,2) NULL,
@@ -22,7 +21,6 @@ create table `antenna`(
  `MODEL` varchar(80) COLLATE utf8mb4_unicode_ci NULL,
  `MANUFACTURER` varchar(255) COLLATE utf8mb4_unicode_ci NULL
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
 ALTER TABLE `antenna` ADD PRIMARY KEY (`ANTENNA_ID`);
 
 create table antenna_pattern(
@@ -37,6 +35,7 @@ create table antenna_polarity(
  `POLARISATION_CODE` varchar(3) COLLATE utf8mb4_unicode_ci NOT NULL,
  `POLARISATION_TEXT` varchar(50) COLLATE utf8mb4_unicode_ci NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+ALTER TABLE `antenna_polarity` ADD PRIMARY KEY (`POLARISATION_CODE`);
 
 create table applic_text_block(
  `APTB_ID`		int NOT NULL,
@@ -124,7 +123,7 @@ ALTER TABLE `client_type` ADD PRIMARY KEY (`TYPE_ID`);
 create table device_details(
  `SDD_ID` int NOT NULL,
  `LICENCE_NO` varchar(63) COLLATE utf8mb4_unicode_ci NULL,
- `DEVICE_REGISTRATION_IDENTIFIER` varchar(63) COLLATE utf8mb4_unicode_ci NULL,
+ `DEVICE_REGISTRATION_IDENTIFIER` varchar(63) COLLATE utf8mb4_unicode_ci NOT NULL,
  `FORMER_DEVICE_IDENTIFIER` varchar(63) COLLATE utf8mb4_unicode_ci NULL,
  `AUTHORISATION_DATE` date,
  `CERTIFICATION_METHOD` varchar(255) COLLATE utf8mb4_unicode_ci NULL,
@@ -177,6 +176,7 @@ create table device_details(
  `STATION_TYPE` varchar(511) COLLATE utf8mb4_unicode_ci NULL,
  `STATION_NAME` varchar(63) COLLATE utf8mb4_unicode_ci NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+ALTER TABLE `device_details` ADD PRIMARY KEY (`DEVICE_REGISTRATION_IDENTIFIER`);
 
 create table fee_status(
  `FEE_STATUS_ID` int NOT NULL,
@@ -224,9 +224,10 @@ create table licence_subservice(
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 create table licensing_area(
- `LICENSING_AREA_ID` varchar(31) COLLATE utf8mb4_unicode_ci NOT NULL,
+ `LICENSING_AREA_ID` tinyint COLLATE utf8mb4_unicode_ci NOT NULL,
  `DESCRIPTION` varchar(511) COLLATE utf8mb4_unicode_ci NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+ALTER TABLE `licensing_area` ADD PRIMARY KEY (`LICENSING_AREA_ID`);
 
 create table nature_of_service(
  `CODE` varchar(31) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -257,9 +258,17 @@ create table site(
  `LONGITUDE` decimal(30,2) NULL,
  `NAME` varchar(767) COLLATE utf8mb4_unicode_ci NULL,
  `STATE` varchar(80) COLLATE utf8mb4_unicode_ci NULL,
- `LICENSING_AREA_ID` decimal(30,2) NULL,
+ `LICENSING_AREA_ID` tinyint NULL,
  `POSTCODE` varchar(18) COLLATE utf8mb4_unicode_ci NULL,
  `SITE_PRECISION` varchar(31) COLLATE utf8mb4_unicode_ci NULL,
  `ELEVATION` decimal(30,2) NULL,
  `HCIS_L2` varchar(31) COLLATE utf8mb4_unicode_ci NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+/**
+ * Create foreign key constraints.
+ */
+
+ALTER TABLE `access_area` ADD CONSTRAINT `AREA_CATEGORY_foreign` FOREIGN KEY(`AREA_CATEGORY`) REFERENCES `licensing_area`(`LICENSING_AREA_ID`) ON DELETE CASCADE ON UPDATE RESTRICT;
+ALTER TABLE `site` ADD CONSTRAINT `LICENSING_AREA_ID_foreign` FOREIGN KEY(`LICENSING_AREA_ID`) REFERENCES `licensing_area`(`LICENSING_AREA_ID`) ON DELETE CASCADE ON UPDATE RESTRICT;

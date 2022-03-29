@@ -1,4 +1,4 @@
-# ACMA Radiocommnuications Database (MySQL schema)
+# ACMA Radiocommunications Database (MySQL schema)
 
 > Based on Australian Communications and Media Authority information.
 
@@ -15,7 +15,7 @@ sed -i -e 's/,,/,NULL,/g' -e 's/,,/,NULL,/g' /path/to/file.csv
 ```
 
 ## Importing Data
-Import the data to each table (ignoring the header row):
+Import the data to each table (ignoring the header row). See [import statements](import-statements.txt).
 
 ```sql
 LOAD DATA INFILE '/var/www/html/<table>.csv'
@@ -26,3 +26,6 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 ```
 
+## Entity Relationship Diagram (Oracle DB)
+
+![ERD](RRLDataDownloads_ERD.jpg)

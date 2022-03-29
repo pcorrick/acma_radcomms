@@ -1,165 +1,165 @@
-LOAD DATA INFILE '/var/www/html/access_area.csv
+LOAD DATA INFILE '/var/www/html/access_area.csv'
 INTO TABLE access_area
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/antenna.csv
+LOAD DATA INFILE '/var/www/html/antenna.csv'
 INTO TABLE antenna
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/antenna_pattern.csv
+LOAD DATA INFILE '/var/www/html/antenna_pattern.csv'
 INTO TABLE antenna_pattern
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/antenna_polarity.csv
+LOAD DATA INFILE '/var/www/html/antenna_polarity.csv'
 INTO TABLE antenna_polarity
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/applic_text_block.csv
+LOAD DATA INFILE '/var/www/html/applic_text_block.csv'
 INTO TABLE applic_text_block
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/auth_spectrum_area.csv
+LOAD DATA INFILE '/var/www/html/auth_spectrum_area.csv'
 INTO TABLE auth_spectrum_area
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/auth_spectrum_freq.csv
+LOAD DATA INFILE '/var/www/html/auth_spectrum_freq.csv'
 INTO TABLE auth_spectrum_freq
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/bsl.csv
+LOAD DATA INFILE '/var/www/html/bsl.csv'
 INTO TABLE bsl
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/bsl_area.csv
+LOAD DATA INFILE '/var/www/html/bsl_area.csv'
 INTO TABLE bsl_area
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/class_of_station.csv
+LOAD DATA INFILE '/var/www/html/class_of_station.csv'
 INTO TABLE class_of_station
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/client.csv
+LOAD DATA INFILE '/var/www/html/client.csv'
 INTO TABLE client
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/client_type.csv
+LOAD DATA INFILE '/var/www/html/client_type.csv'
 INTO TABLE client_type
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/device_details.csv
+LOAD DATA INFILE '/var/www/html/device_details.csv'
 INTO TABLE device_details
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/fee_status.csv
+LOAD DATA INFILE '/var/www/html/fee_status.csv'
 INTO TABLE fee_status
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/industry_cat.csv
+LOAD DATA INFILE '/var/www/html/industry_cat.csv'
 INTO TABLE industry_cat
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/licence.csv
+LOAD DATA INFILE '/var/www/html/licence.csv'
 INTO TABLE licence
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/licence_service.csv
+LOAD DATA INFILE '/var/www/html/licence_service.csv'
 INTO TABLE licence_service
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/licence_status.csv
+LOAD DATA INFILE '/var/www/html/licence_status.csv'
 INTO TABLE licence_status
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/licence_subservice.csv
+LOAD DATA INFILE '/var/www/html/licence_subservice.csv'
 INTO TABLE licence_subservice
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/licensing_area.csv
+LOAD DATA INFILE '/var/www/html/licensing_area.csv'
 INTO TABLE licensing_area
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/nature_of_service.csv
+LOAD DATA INFILE '/var/www/html/nature_of_service.csv'
 INTO TABLE nature_of_service
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/reports_text_block.csv
+LOAD DATA INFILE '/var/www/html/reports_text_block.csv'
 INTO TABLE reports_text_block
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/satellite.csv
+LOAD DATA INFILE '/var/www/html/satellite.csv'
 INTO TABLE satellite
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE '/var/www/html/site.csv
+LOAD DATA INFILE '/var/www/html/site.csv'
 INTO TABLE site
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
