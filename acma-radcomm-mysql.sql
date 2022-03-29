@@ -109,7 +109,7 @@ CREATE TABLE `client_type` (
 create table device_details(
  `SDD_ID` int NOT NULL,
  `LICENCE_NO` varchar(63) COLLATE utf8mb4_unicode_ci NULL,
- `DEVICE_REGISTRATION_IDENTIFIER` varchar(63) COLLATE utf8mb4_unicode_ci NOT NULL,
+ `DEVICE_REGISTRATION_IDENTIFIER` varchar(63) COLLATE utf8mb4_unicode_ci NULL,
  `FORMER_DEVICE_IDENTIFIER` varchar(63) COLLATE utf8mb4_unicode_ci NULL,
  `AUTHORISATION_DATE` date,
  `CERTIFICATION_METHOD` varchar(255) COLLATE utf8mb4_unicode_ci NULL,

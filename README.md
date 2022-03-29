@@ -14,16 +14,32 @@ Empty fields are denoted with ,, in the .csv files, these need to be explicitly 
 sed -i -e 's/,,/,NULL,/g' -e 's/,,/,NULL,/g' /path/to/file.csv
 ```
 
+
+Replace any trailing commas with ,NULL (where the last column of data is NULL):
+```bash
+sudo sed -i 's/,$/,NULL/g' /path/to/file.csv
+```
+
+
+Remove any escape characters from the exported data:
+```bash
+sudo sed -i 's/\\//g' /path/to/file.csv
+```
+
 ## Importing Data
-Import the data to each table (ignoring the header row). See [import statements](import-statements.txt).
+Import the data to each table (ignoring the header row and disabling foreign key checks). See [import statements](import-statements.txt).
 
 ```sql
+SET foreign_key_checks = 0;
+
 LOAD DATA INFILE '/var/www/html/<table>.csv'
 INTO TABLE <table>
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
+
+SET foreign_key_checks = 1;
 ```
 
 ## Entity Relationship Diagram
