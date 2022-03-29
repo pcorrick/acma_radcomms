@@ -25,7 +25,6 @@ create table `antenna`(
 
 ALTER TABLE `antenna` ADD PRIMARY KEY (`ANTENNA_ID`);
 
-
 create table antenna_pattern(
  `ANTENNA_ID` varchar(31) COLLATE utf8mb4_unicode_ci NOT NULL,
  `AZ_TYPE` varchar(15) COLLATE utf8mb4_unicode_ci NULL,
@@ -87,9 +86,6 @@ CREATE TABLE `bsl_area` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 ALTER TABLE `bsl_area` ADD PRIMARY KEY (`AREA_CODE`);
-
-
-
 
 CREATE TABLE `class_of_station` (
   `CODE` varchar(31) COLLATE utf8mb4_unicode_ci NOT NULL,
