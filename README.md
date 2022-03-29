@@ -30,16 +30,12 @@ sudo sed -i 's/\\//g' /path/to/file.csv
 Import the data to each table (ignoring the header row and disabling foreign key checks). See [import statements](import-statements.txt).
 
 ```sql
-SET foreign_key_checks = 0;
-
 LOAD DATA INFILE '/var/www/html/<table>.csv'
 INTO TABLE <table>
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
-
-SET foreign_key_checks = 1;
 ```
 
 ## Entity Relationship Diagram

@@ -238,8 +238,8 @@ create table satellite(
 
 create table site(
  `SITE_ID` varchar(31) COLLATE utf8mb4_unicode_ci NOT NULL,
- `LATITUDE` decimal(30,2) NULL,
- `LONGITUDE` decimal(30,2) NULL,
+ `LATITUDE` decimal(30,6) NULL,
+ `LONGITUDE` decimal(30,6) NULL,
  `NAME` varchar(767) COLLATE utf8mb4_unicode_ci NULL,
  `STATE` varchar(80) COLLATE utf8mb4_unicode_ci NULL,
  `LICENSING_AREA_ID` tinyint NULL,
