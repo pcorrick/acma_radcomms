@@ -130,7 +130,7 @@ create table device_details(
  `TILT` decimal(30,2) NULL,
  `FEEDER_LOSS` decimal(30,2) NULL,
  `LEVEL_OF_PROTECTION` decimal(30,2) NULL,
- `EIRP` decimal(30,2) NULL,
+ `EIRP` decimal(30,6) NULL,
  `EIRP_UNIT` varchar(31) COLLATE utf8mb4_unicode_ci NULL,
  `SV_ID` int NULL,
  `SS_ID` int NULL,
